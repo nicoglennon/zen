@@ -1,0 +1,117 @@
+/* styles */
+/* called by your view template */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: "Source Code Pro", monospace;
+  background: linear-gradient(351deg, #ff7675, #fdcb6e, #55efc4, #00cec9, #a29bfe, #fd79a8);
+  background-size: 1600% 1600%;
+
+  -webkit-animation: GradientAnimation 45s ease infinite;
+  -moz-animation: GradientAnimation 45s ease infinite;
+  animation: GradientAnimation 45s ease infinite;
+}
+
+@-webkit-keyframes GradientAnimation {
+  0%{background-position:34% 0%}
+  50%{background-position:67% 100%}
+  100%{background-position:34% 0%}
+}
+@-moz-keyframes GradientAnimation {
+  0%{background-position:34% 0%}
+  50%{background-position:67% 100%}
+  100%{background-position:34% 0%}
+}
+@keyframes GradientAnimation { 
+  0%{background-position:34% 0%}
+  50%{background-position:67% 100%}
+  100%{background-position:34% 0%}
+}
+
+div#main-menu {
+  font-size: 18px;
+  color: white;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 140px;
+  height: 150px;
+  padding: 0px;
+  text-align: center;
+  border: 2px solid white;  
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 300ms ease-out;
+}
+
+a.list-item {
+  display: block;
+  padding: 14px 0px;
+}
+
+div.backdrop {
+  color: white;
+  border: 2px solid white;
+  transform: translateZ(90px);
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  bottom: 20px;
+  color: white;
+}
+
+a#footer-a {
+  text-align: center;
+  padding: 5px 10px;
+}
+
+div#footerdiv {
+  margin: auto;
+  font-size: 14px;
+  
+/*     width: 400px; */
+}
+
+@media only screen and (min-width: 768px) {
+  
+  div#main-menu {
+    font-size: 16px;
+    padding: 20px 0px;
+    transform-style: preserve-3d;
+    transform: perspective(300px);
+    backface-visibility: hidden;
+    height: 160px; 
+  }
+  
+  a.list-item {
+    padding: 10px;
+    transform: translateZ(36px);
+    backface-visibility: hidden;
+  }
+  
+  a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: background-color 400ms ease-out;
+  }
+  
+}
+
+

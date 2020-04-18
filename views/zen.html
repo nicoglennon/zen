@@ -1,0 +1,77 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!-- You might want to try something fancier: -->
+<!-- html/nunjucks docs: https://mozilla.github.io/nunjucks/ -->
+<!-- pug: https://pugjs.org/ -->
+<!-- haml: http://haml.info/ -->
+<!-- hbs(handlebars): http://handlebarsjs.com/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Zen | by Nico Glennon</title>
+    <meta name="description" content="A cool thing made with Glitch">
+    <link id="favicon" rel="icon" href="https://cdn.glitch.com/a639612e-6854-4f12-bc78-fd8f0d99cf8c%2Ffavicon%20(2).ico?1534903933241" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- import normalize.css-->
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/normalize.css@8.0.0/normalize.css">
+    
+    <!-- import the main stylesheet -->
+    <link rel="stylesheet" href="/css/zen.css">
+    
+    <!-- import the webpage's client-side javascript file -->
+    <script src="/js/client.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>
+      </h1>
+    </header>
+
+    <main>
+        <div id="main-menu" data-tilt>
+          <a class="list-item" href="/rain">Rain</a>
+<!--           <a class="list-item" href="/sky">Sky</a> -->
+<!--           <a class="list-item" href="/garden">Garden</a> -->
+          <a class="list-item" href="/sea">Sea</a>
+          <a class="list-item" href="/space">Space</a>
+        </div> 
+    </main>
+    
+    <footer>
+      <div id="footerdiv">
+        <a href="https://nico.gl" id="footer-a">
+            Made in Chicago 🎏
+        </a>
+      </div>
+    </footer>
+    
+    <!-- jQuery -->
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+    crossorigin="anonymous"></script>
+    
+    <!-- Tilt.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+
+    <script>
+      $( document ).ready(function() {
+        
+        // tilt.js
+        $('#main-menu').tilt({
+          scale: 1.1,
+          glare: true,
+          maxGlare: .5,
+          speed: 2000, 
+        })
+        
+      });   
+    </script>
+  </body>
+</html>
